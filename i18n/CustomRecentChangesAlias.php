@@ -12,10 +12,10 @@ $specialPageAliases = [];
  * Page name aliases
  */
 $specialPageAliases['en'] = [
-    'DokitRecentChanges' => ['DokitRecentChanges', 'Dokit_Recent_Changes']
+    'CustomRecentChanges' => ['DokitRecentChanges', 'Dokit_Recent_Changes']
 ];
 
 $specialPageAliases['fr'] = [
-    'DokitRecentChanges' => ['DokitModificationsRécentes', 'Dokit_Modifications_Récentes']
+    'CustomRecentChanges' => ['DokitModificationsRécentes', 'Dokit_Modifications_Récentes']
 ];
 

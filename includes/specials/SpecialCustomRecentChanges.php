@@ -1,6 +1,6 @@
 <?php
 
-namespace RecentChanges\Specials;
+namespace CustomRecentChanges\Specials;
 
 use FormOptions;
 use Html;
@@ -8,7 +8,7 @@ use MediaWiki\MediaWikiServices;
 use RecentChange;
 use TitleValue;
 use Wikimedia\Rdbms\ResultWrapper;
-use RecentChanges\Changes\RecentChangesList;
+use CustomRecentChanges\Changes\CustomRecentChangesList;
 use Xml;
 
 /**
@@ -18,12 +18,12 @@ use Xml;
  */
 
 
-class SpecialRecentChanges extends \SpecialRecentChanges
+class SpecialCustomRecentChanges extends \SpecialRecentChanges
 {
     // @codingStandardsIgnoreStart Needed "useless" override to change parameters.
     public function __construct()
     {
-        parent::__construct('DokitRecentChanges');
+        parent::__construct('CustomRecentChanges');
     }
 
 
@@ -215,7 +215,7 @@ class SpecialRecentChanges extends \SpecialRecentChanges
         $dbr = $this->getDB();
 
         $counter = 1;
-        $list = new RecentChangesList($this->getContext(), $this->filterGroups);
+        $list = new CustomRecentChangesList($this->getContext(), $this->filterGroups);
         $list->initChangesListRows( $rows );
 
         // Start list

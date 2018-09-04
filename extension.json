@@ -1,36 +1,34 @@
 {
-    "name": "dokit/RecentChanges",
+    "name": "wikifab/CustomRecentChanges",
     "author": "Brendan Poirier",
-    "url": "https://www.mediawiki.org/wiki/Extension:RecentChanges",
     "description": "Redesign of the RecentChanges page",
     "license-name": "GPL-2.0+",
     "type": "ext",
     "AutoloadClasses": {
-        "RecentChanges\\Specials\\SpecialRecentChanges": "includes/specials/SpecialRecentChanges.php",
-        "RecentChanges\\Changes\\RecentChangesList": "includes/changes/RecentChangesList.php",
-        "RecentChanges\\RecentChangesHooks": "RecentChangesHooks.php"
+        "CustomRecentChanges\\Specials\\SpecialCustomRecentChanges": "includes/specials/SpecialCustomRecentChanges.php",
+        "CustomRecentChanges\\Changes\\CustomRecentChangesList": "includes/changes/CustomRecentChangesList.php"
     },
     "SpecialPages": {
-        "DokitRecentChanges": "RecentChanges\\Specials\\SpecialRecentChanges"
+        "CustomRecentChanges": "CustomRecentChanges\\Specials\\SpecialCustomRecentChanges"
     },
     "ResourceModules": {
-        "ext.RecentChanges.css":{
+        "ext.CustomRecentChanges.css":{
             "styles": [
                 "resources/css/style.css"
             ]
         },
-        "ext.RecentChanges.js":{
+        "ext.CustomRecentChanges.js":{
             "scripts": [
                 "resources/js/main.js"
             ]
         }
     },
     "ExtensionMessagesFiles": {
-        "RecentChangesAlias": "i18n/RecentChangesAlias.php"
+        "CustomRecentChangesAlias": "i18n/CustomRecentChangesAlias.php"
     },
     "ResourceFileModulePaths": {
         "localBasePath": "",
-        "remoteExtPath": "RecentChanges"
+        "remoteExtPath": "CustomRecentChanges"
     },
     "MessagesDirs": {
         "RecentChanges": [

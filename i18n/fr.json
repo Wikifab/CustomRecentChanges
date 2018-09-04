@@ -1,7 +1,9 @@
 {
-    "dokitrecentchanges": "Modifications récentes",
+    "customrecentchanges": "Modifications récentes",
     "recentchanges-namespace-label": "Filtrer par :",
-    "recentchanges-namespace-main": "Tutoriels",
+    "recentchanges-namespace-main": "Pages",
+    "recentchanges-namespace-group": "Groupes",
+    "recentchanges-namespace-item": "Pièces & Outils",
     "recentchanges-namespace-all": "Tous",
     "recentchanges-entry-footer-nchangeslink": "Afficher les $1 opérations",
     "recentchanges-entry-footer-historylink": "Historique",

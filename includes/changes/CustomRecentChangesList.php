@@ -5,7 +5,7 @@
  * Date: 23/08/2018
  * Time: 14:21
  */
-namespace RecentChanges\Changes;
+namespace CustomRecentChanges\Changes;
 
 use HtmlArmor;
 use IContextSource;
@@ -21,7 +21,7 @@ use RCCacheEntryFactory;
 /**
  * Constructs Recent Changes list HTML
  */
-class RecentChangesList extends \EnhancedChangesList
+class CustomRecentChangesList extends \EnhancedChangesList
 {
 
     protected $lastUser;
@@ -70,8 +70,8 @@ class RecentChangesList extends \EnhancedChangesList
         $this->lastUser = null;
         $this->rclistOpen = false;
 
-        $this->getOutput()->addModuleStyles( 'ext.RecentChanges.css' );
-        $this->getOutput()->addModuleScripts( 'ext.RecentChanges.js' );
+        $this->getOutput()->addModuleStyles( 'ext.CustomRecentChanges.css' );
+        $this->getOutput()->addModuleScripts( 'ext.CustomRecentChanges.js' );
 
         return '
             <div class="rc-root-list rc-list">

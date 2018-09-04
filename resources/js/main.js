@@ -58,7 +58,7 @@
         }).done(function (html) {
             output(html);
         }).fail(function (jqXHR, html) {
-            if(jqXHR.status = 404) output(html);
+            if(jqXHR.status == 404) output(html);
         });
     }
 
