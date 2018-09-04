@@ -1,0 +1,54 @@
+{
+    "name": "dokit/RecentChanges",
+    "author": "Brendan Poirier",
+    "url": "https://www.mediawiki.org/wiki/Extension:RecentChanges",
+    "description": "Redesign of the RecentChanges page",
+    "license-name": "GPL-2.0+",
+    "type": "ext",
+    "AutoloadClasses": {
+        "RecentChanges\\Specials\\SpecialRecentChanges": "includes/specials/SpecialRecentChanges.php",
+        "RecentChanges\\Changes\\RecentChangesList": "includes/changes/RecentChangesList.php",
+        "RecentChanges\\Logging\\RecentChangeLogFormatter": "includes/logging/RecentChangeLogFormatter.php",
+        "RecentChanges\\Changes\\RCCacheEntryFactory": "includes/changes/RCCacheEntryFactory.php",
+        "RecentChanges\\Changes\\RCCacheEntry": "includes/changes/RCCacheEntry.php",
+        "RecentChanges\\RecentChangesHooks": "RecentChangesHooks.php"
+    },
+    "SpecialPages": {
+        "DokitRecentChanges": "RecentChanges\\Specials\\SpecialRecentChanges"
+    },
+    "ResourceModules": {
+        "ext.RecentChanges.css":{
+            "styles": [
+                "resources/css/style.css"
+            ]
+        },
+        "ext.RecentChanges.js":{
+            "scripts": [
+                "resources/js/main.js"
+            ]
+        }
+    },
+    "ExtensionMessagesFiles": {
+        "RecentChangesAlias": "i18n/RecentChangesAlias.php"
+    },
+    "ResourceFileModulePaths": {
+        "localBasePath": "",
+        "remoteExtPath": "RecentChanges"
+    },
+    "MessagesDirs": {
+        "RecentChanges": [
+            "i18n"
+        ]
+    },
+    "config": {
+        "RCNamespacesList": [
+            0,
+            2,
+            6,
+            14,
+            220
+        ],
+        "RCNamespacesListIgnored": []
+    },
+    "manifest_version": 1
+}

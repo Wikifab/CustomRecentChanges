@@ -1,0 +1,5 @@
+{
+	"name": "dokit/recent-changes",
+	"type": "mediawiki-extension",
+	"require": {}
+}
