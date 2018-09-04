@@ -1,12 +1,12 @@
 {
     "customrecentchanges": "Modifications récentes",
-    "recentchanges-namespace-label": "Filtrer par :",
-    "recentchanges-namespace-main": "Pages",
-    "recentchanges-namespace-group": "Groupes",
-    "recentchanges-namespace-item": "Pièces & Outils",
-    "recentchanges-namespace-all": "Tous",
-    "recentchanges-entry-footer-nchangeslink": "Afficher les $1 opérations",
-    "recentchanges-entry-footer-historylink": "Historique",
-    "recentchanges-entry-new": "Nouvelle page : $1",
-    "recentchanges-entry-edit": "Page modifiée : $1"
+    "customrecentchanges-namespace-label": "Filtrer par :",
+    "customrecentchanges-namespace-main": "Pages",
+    "customrecentchanges-namespace-group": "Groupes",
+    "customrecentchanges-namespace-item": "Pièces & Outils",
+    "customrecentchanges-namespace-all": "Tous",
+    "customrecentchanges-entry-footer-nchangeslink": "Afficher les $1 opérations",
+    "customrecentchanges-entry-footer-historylink": "Historique",
+    "customrecentchanges-entry-new": "Nouvelle page : $1",
+    "customrecentchanges-entry-edit": "Page modifiée : $1"
 }

@@ -427,11 +427,11 @@ class CustomRecentChangesList extends \EnhancedChangesList
 
         # Else, print the article title with a custom action text
         if ($type == RC_NEW) {
-            $titleMessageKey = 'recentchanges-entry-new';
+            $titleMessageKey = 'customrecentchanges-entry-new';
         }elseif ($type == RC_EDIT) {
-            $titleMessageKey = 'recentchanges-entry-edit';
+            $titleMessageKey = 'customrecentchanges-entry-edit';
         }else{
-            $titleMessageKey = 'recentchanges-entry-title';
+            $titleMessageKey = 'customrecentchanges-entry-title';
         }
 
         return $this->msg($titleMessageKey)->rawParams(
@@ -499,7 +499,7 @@ class CustomRecentChangesList extends \EnhancedChangesList
         static $nchanges = [];
 
         if (!isset($nchanges[$n])) {
-            $nchanges[$n] = $this->msg('recentchanges-entry-footer-nchangeslink')->numParams($n)->escaped();
+            $nchanges[$n] = $this->msg('customrecentchanges-entry-footer-nchangeslink')->numParams($n)->escaped();
         }
 
         $links['changes'] =  '<a class="rc-toggle-list" href="#">'.$nchanges[$n].'</a>';

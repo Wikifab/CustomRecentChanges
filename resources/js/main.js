@@ -57,8 +57,10 @@
             data: filters
         }).done(function (html) {
             output(html);
-        }).fail(function (jqXHR, html) {
-            if(jqXHR.status == 404) output(html);
+        }).fail(function (jqXHR) {
+            if(jqXHR.status === 404){
+                output(jqXHR.responseText);
+            }
         });
     }
 

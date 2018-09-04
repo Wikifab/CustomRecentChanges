@@ -69,7 +69,7 @@ class SpecialCustomRecentChanges extends \SpecialRecentChanges
         $html .= $this->optionsPanel($defaults, $nondefaults);
 
         // Generate filter links
-        $html .= Html::element('span', ['class' => 'rc-options-label'], $this->msg('recentchanges-namespace-label')->text());
+        $html .= Html::element('span', ['class' => 'rc-options-label'], $this->msg('customrecentchanges-namespace-label')->text());
         $html .= $this->namespaceFilter($defaults, $nondefaults, $numRows);
 
         // Close options bar
@@ -140,13 +140,18 @@ class SpecialCustomRecentChanges extends \SpecialRecentChanges
 
         // Replace (Main) namespace and all default value
         $namespaces = [
-            'all' => $this->msg('recentchanges-namespace-all')->text(),
-            0 => $this->msg('recentchanges-namespace-main')->text()
+            'all' => $this->msg('customrecentchanges-namespace-all')->text(),
+            0 => $this->msg('customrecentchanges-namespace-main')->text()
         ] + $namespaces;
 
         $selected = isset($nondefaults['namespace']) ? $nondefaults['namespace'] : 'all';
 
         foreach ($namespaces as $key => $namespace) {
+            $translation = $this->msg('customrecentchanges-namespace-'.strtolower($namespace));
+
+            // If the namespace has been translated, show translation
+            if($translation->exists()) $namespace = $translation->text();
+
             // Generate option
             $links[] = Html::linkButton($namespace, ['data-id' => $key, 'href' => '#']);
         }
