@@ -7,21 +7,16 @@
  */
 namespace RecentChanges\Changes;
 
-use DomainException;
-use Hooks;
-use Html;
 use HtmlArmor;
 use IContextSource;
 use IP;
 use LogFormatter;
-use LogPage;
-use Message;
 use MWException;
 use RCCacheEntry;
-use Sanitizer;
 use Skin;
 use SpecialPage;
 use TemplateParser;
+use RCCacheEntryFactory;
 
 /**
  * Constructs Recent Changes list HTML

@@ -8,9 +8,6 @@
     "AutoloadClasses": {
         "RecentChanges\\Specials\\SpecialRecentChanges": "includes/specials/SpecialRecentChanges.php",
         "RecentChanges\\Changes\\RecentChangesList": "includes/changes/RecentChangesList.php",
-        "RecentChanges\\Logging\\RecentChangeLogFormatter": "includes/logging/RecentChangeLogFormatter.php",
-        "RecentChanges\\Changes\\RCCacheEntryFactory": "includes/changes/RCCacheEntryFactory.php",
-        "RecentChanges\\Changes\\RCCacheEntry": "includes/changes/RCCacheEntry.php",
         "RecentChanges\\RecentChangesHooks": "RecentChangesHooks.php"
     },
     "SpecialPages": {
