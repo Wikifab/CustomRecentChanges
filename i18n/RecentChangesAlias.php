@@ -7,7 +7,6 @@
  */
 
 $specialPageAliases = [];
-$magicWords = [];
 
 /**
  * Page name aliases
@@ -19,12 +18,4 @@ $specialPageAliases['en'] = [
 $specialPageAliases['fr'] = [
     'DokitRecentChanges' => ['DokitModificationsRécentes', 'Dokit_Modifications_Récentes']
 ];
-
-/**
- * Parser function magic words
- */
-$magicWords['en'] = [
-    'rc' => [0, 'rc'],
-];
-
 
