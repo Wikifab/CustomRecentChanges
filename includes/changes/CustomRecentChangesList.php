@@ -74,11 +74,7 @@ class CustomRecentChangesList extends \EnhancedChangesList
         $this->getOutput()->addModuleScripts( 'ext.CustomRecentChanges.js' );
 
         return '
-            <div class="rc-root-list rc-list">
-                <div class="rc-loading">
-                    <i class="fa fa-spinner fa-pulse"></i>
-                </div>
-            ';
+            <div class="rc-root-list rc-list">';
     }
 
     /**

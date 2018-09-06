@@ -1,6 +1,6 @@
 (function ($, mw) {
 
-    var specialPage = "Special:DokitRecentChanges";
+    var specialPage = "Special:CustomRecentChanges";
 
     var filters = {
         title: specialPage,
@@ -8,6 +8,7 @@
     };
 
     $document = $(document);
+    $body = $('body');
     $list = $('.rc-list');
     $toggleBtn = $('.rc-toggle-list');
     $namespaceLink = $('.rc-namespaces-links li a');
@@ -27,6 +28,11 @@
     $namespaceLink.on('click', function (e) {
         // Stop browser native event
         e.preventDefault();
+
+        // Add focus style on selected namespace
+        $namespaceLink.removeClass('active');
+        $(this).addClass('active');
+
         // Change namespace
         filters['namespace'] = $(this).data('id');
         // Load result
@@ -43,8 +49,8 @@
     });
 
     $document.on({
-        ajaxStart: function() {$list.addClass("loading");},
-        ajaxStop: function() {$list.removeClass("loading");}
+        ajaxStart: function() {$body.addClass("rc-loading");},
+        ajaxStop: function() {$body.removeClass("rc-loading");}
     });
     
     
@@ -58,9 +64,8 @@
         }).done(function (html) {
             output(html);
         }).fail(function (jqXHR) {
-            if(jqXHR.status === 404){
+            if(jqXHR.status === 404)
                 output(jqXHR.responseText);
-            }
         });
     }
 

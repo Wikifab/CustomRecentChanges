@@ -75,6 +75,10 @@
     background-color: #30373b;
 }
 
+.rc-namespaces-links li a.active{
+    font-weight: 700;
+}
+
 .rc-dropdowns{
     line-height: 32px;
 }
@@ -89,15 +93,17 @@
     line-height: 30px;
 }
 
+
+
 /**
- * Recent Changes rows styles
+ * Loader styles
  */
 
-.rc-root-list.loading .rc-row{
+.rc-loading .rc-root-list{
     opacity: 0.6;
 }
 
-.rc-loading{
+.rc-loader{
     position: absolute;
     width: 100%;
     text-align: center;
@@ -105,9 +111,15 @@
     display: none;
 }
 
-.rc-root-list.loading .rc-loading{
+.rc-loading .rc-loader{
     display: block;
 }
+
+
+
+/**
+ * Recent Changes rows styles
+ */
 
 .rc-date-header{
     font-size: 18px;

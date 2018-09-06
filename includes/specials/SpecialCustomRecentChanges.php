@@ -77,6 +77,12 @@ class SpecialCustomRecentChanges extends \SpecialRecentChanges
         // Close options bar
         $html .= Html::closeElement('form');
 
+        // Add Javascript loader on filter change
+        $html .= '
+            <div class="rc-loader">
+                <i class="fa fa-spinner fa-pulse"></i>
+            </div>';
+
         $this->getOutput()->addHTML($html);
     }
 
@@ -281,5 +287,17 @@ class SpecialCustomRecentChanges extends \SpecialRecentChanges
         } else {
             $this->getOutput()->addHTML( $rclistOutput );
         }
+    }
+
+
+    /**
+     * Add the "no results" message to the output
+     */
+    protected function outputNoResults() {
+        $this->getOutput()->addHTML(
+            '<div class="rc-list rc-list-noresults">' .
+                $this->msg( 'recentchanges-noresult' )->parse() .
+            '</div>'
+        );
     }
 }
