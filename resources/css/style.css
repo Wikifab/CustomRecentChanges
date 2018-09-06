@@ -14,6 +14,10 @@
     display: none;
 }
 
+/**
+ * Options bar
+ */
+
 .rc-options{
     margin-bottom: 20px;
     font-size: 12px;
@@ -21,13 +25,32 @@
     border-bottom: 1px solid #eaeaea;
 }
 
+.rc-options::after{
+    content: ' ';
+    display: block;
+    clear: both;
+}
+
 .rc-dropdowns{
     float: right;
 }
 
+.rc-namespaces{
+    float: left;
+}
+
+/** On screens lower than 1200px **/
+@media screen and (max-width: 1199px) {
+
+    .rc-dropdowns{
+        float: left;
+        margin-bottom: 10px;
+    }
+}
+
 .rc-namespaces-links{
     display: inline-block;
-    line-height: 30px;
+    line-height: 32px;
     margin: 0 !important;
     padding: 0 !important;
 }
@@ -286,5 +309,5 @@
 }
 
 .rc-icon-newusers::after{
-    content: "\f234";
+    content: "\f007";
 }

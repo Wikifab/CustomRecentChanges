@@ -65,12 +65,14 @@ class SpecialCustomRecentChanges extends \SpecialRecentChanges
         // Start HTML and open options bar
         $html = Html::openElement('form', ['class' => 'rc-options', 'method' => 'GET']);
 
-        // Generate dropdowns options
+        // Generate dropdowns options, it replaces link filters
         $html .= $this->optionsPanel($defaults, $nondefaults);
 
         // Generate filter links
+        $html .= Html::openElement('div',['class' => 'rc-namespaces']);
         $html .= Html::element('span', ['class' => 'rc-options-label'], $this->msg('customrecentchanges-namespace-label')->text());
         $html .= $this->namespaceFilter($defaults, $nondefaults, $numRows);
+        $html .= Html::closeElement('div');
 
         // Close options bar
         $html .= Html::closeElement('form');
