@@ -1,5 +1,5 @@
 {
-	"name": "dokit/recent-changes",
+	"name": "wikifab/custom-recent-changes",
 	"type": "mediawiki-extension",
 	"require": {}
 }
