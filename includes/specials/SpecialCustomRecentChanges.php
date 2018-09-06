@@ -111,8 +111,8 @@ class SpecialCustomRecentChanges extends \SpecialRecentChanges
         ]);
 
         $limitSelect = new \HTMLSelectField([
-            'fieldname' => 'limits',
-            'name' => 'limits',
+            'fieldname' => 'limit',
+            'name' => 'limit',
             'options' => $limits
         ]);
 

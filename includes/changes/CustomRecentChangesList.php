@@ -198,7 +198,7 @@ class CustomRecentChangesList extends \EnhancedChangesList
         $data['timestamp'] = $rc->timestamp;
 
         # Icon
-        $data['icon'] = $this->getIcon($rc);
+        $data['icon'] = $this->getFlagIcon($rc);
 
         # Title
         $data['title'] = $this->getActionText($rc);
@@ -277,7 +277,7 @@ class CustomRecentChangesList extends \EnhancedChangesList
         $data['timestamp'] = $rcs[0]->timestamp;
 
         # Icon
-        $data['icon'] = $this->getIcon($rcs[0]);
+        $data['icon'] = $this->getFlagIcon($rcs[0]);
 
         # Title
         $data['title'] = $this->getActionText($rcs[0]);
@@ -522,12 +522,12 @@ class CustomRecentChangesList extends \EnhancedChangesList
 
 
     /**
-     * Get action type
+     * Get action type to render correct icon
      *
      * @param RCCacheEntry $rc
      * @return mixed|string
      */
-    protected function getActionType(RCCacheEntry $rc){
+    protected function getFlagIcon(RCCacheEntry $rc){
         $type = $rc->getAttribute('rc_type');
 
         if($type == RC_NEW){

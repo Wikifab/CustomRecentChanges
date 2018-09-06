@@ -200,3 +200,91 @@
     content: '\f106';
     font-family: FontAwesome, serif;
 }
+
+/**
+ * Icons
+ */
+
+.rc-icon{
+    float: left;
+    font-size: 12px;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin-right: 10px;
+    padding: 0;
+    border-radius: 3px;
+    background: #337ab7;
+}
+
+.rc-icon::after{
+    display: inline;
+    content: "\f129";
+    color: #ffffff;
+    font-family: 'FontAwesome';
+    font-style: normal;
+}
+
+/** New icon**/
+.rc-icon-new{
+    background: #5cb85c;
+}
+
+.rc-icon-new::after{
+    content: "\f067";
+}
+
+/** Edit icon **/
+.rc-icon-edit{
+    background: #f0ad4e;
+}
+
+.rc-icon-edit::after{
+    content: "\f040";
+}
+
+/** Delete icon **/
+.rc-icon-delete{
+    background: #d9534f;
+}
+
+.rc-icon-delete::after{
+    content: "\f1f8";
+}
+
+/** Move icon **/
+.rc-icon-move{
+    background: #5bc0de;
+}
+
+.rc-icon-move::after{
+    content: "\f047";
+}
+
+/** Upload icon **/
+.rc-icon-upload{
+    background: #563d7c;
+}
+
+.rc-icon-upload::after{
+    content: "\f093";
+}
+
+/** Pagelang icon **/
+.rc-icon-pagelang{
+    background: #777777;
+}
+
+.rc-icon-pagelang::after{
+    content: "\f0ac";
+}
+
+/** Newusers icon **/
+.rc-icon-newusers{
+    background: #e123d8;
+}
+
+.rc-icon-newusers::after{
+    content: "\f234";
+}
