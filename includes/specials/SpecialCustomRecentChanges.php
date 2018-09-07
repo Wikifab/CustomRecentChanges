@@ -146,13 +146,11 @@ class SpecialCustomRecentChanges extends \SpecialRecentChanges
     {
         $namespaces = $this->getNamespacesList();
 
-        // Replace (Main) namespace and all default value
+        // Replace (Main) namespace and all default values
         $namespaces = [
             'all' => $this->msg('customrecentchanges-namespace-all')->text(),
             0 => $this->msg('customrecentchanges-namespace-main')->text()
         ] + $namespaces;
-
-        $selected = isset($nondefaults['namespace']) ? $nondefaults['namespace'] : 'all';
 
         foreach ($namespaces as $key => $namespace) {
             $translation = $this->msg('customrecentchanges-namespace-'.strtolower($namespace));
@@ -160,8 +158,8 @@ class SpecialCustomRecentChanges extends \SpecialRecentChanges
             // If the namespace has been translated, show translation
             if($translation->exists()) $namespace = $translation->text();
 
-            // Generate option
-            $links[] = Html::linkButton($namespace, ['data-id' => $key, 'href' => '#']);
+            // Generate link
+            $links[] = Html::linkButton($namespace, ['data-id' => ($key !== 'all') ? $key : '', 'href' => '#']);
         }
 
         $html = Html::openElement('ul', ['class' => 'rc-namespaces-links']);
