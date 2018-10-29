@@ -20,7 +20,7 @@
 
 .rc-options{
     margin-bottom: 20px;
-    font-size: 12px;
+    font-size: 14px;
     padding-bottom: 15px;
     border-bottom: 1px solid #eaeaea;
 }
@@ -87,12 +87,8 @@
     padding: 8px;
     border: none;
     line-height: 30px;
+    height: 32px;
 }
-
-.rc-dropdowns select{
-    line-height: 30px;
-}
-
 
 
 /**
