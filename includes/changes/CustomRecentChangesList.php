@@ -17,6 +17,7 @@ use Skin;
 use SpecialPage;
 use TemplateParser;
 use RCCacheEntryFactory;
+use User;
 
 /**
  * Constructs Recent Changes list HTML
