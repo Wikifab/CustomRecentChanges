@@ -370,7 +370,7 @@ class CustomRecentChangesList extends \EnhancedChangesList
         $userRealName = $rc->getAttribute('user_real_name');
 
         // Check if username is IP
-        if (IP::isIPAddress($user)){
+        if (IP::isIPAddress($userName)){
             $html .= $userName;
 
         }
