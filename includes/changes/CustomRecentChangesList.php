@@ -17,6 +17,7 @@ use Skin;
 use SpecialPage;
 use TemplateParser;
 use RCCacheEntryFactory;
+use User;
 
 /**
  * Constructs Recent Changes list HTML
@@ -365,19 +366,22 @@ class CustomRecentChangesList extends \EnhancedChangesList
     protected function getUserDisplayName(RCCacheEntry $rc){
         $html = '';
 
-        $user = $rc->getAttribute('rc_user_text');
+        $userName = $rc->getAttribute('rc_user_text');
         $userRealName = $rc->getAttribute('user_real_name');
 
         // Check if username is IP
-        if (IP::isIPAddress($user)){
-            $html .= $user;
+        if (IP::isIPAddress($userName)){
+            $html .= $userName;
 
         }
         // Else, it means it's a user
         else{
+            $user = User::newFromName( $userName, false );
+            $url = $user->getUserPage()->getLinkURL();
+
             $html .= '
-                <a href="#">
-                    '.(($userRealName != '') ? $userRealName : $user).'
+                <a href="'.$url.'">
+                    '.(($userRealName != '') ? $userRealName : $userName).'
                 </a>
             ';
         }
