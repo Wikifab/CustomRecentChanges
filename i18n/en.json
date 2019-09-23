@@ -1,5 +1,12 @@
 {
-    "recentchanges": "Get changes",
-    "recentchanges-differences-link": "Compare the versions",
-    "recentchanges-history-link": "Page history"
+    "customrecentchanges": "Recent changes",
+    "customrecentchanges-namespace-label": "Filters:",
+    "customrecentchanges-namespace-main": "Pages",
+    "customrecentchanges-namespace-group": "Groups",
+    "customrecentchanges-namespace-item": "Items",
+    "customrecentchanges-namespace-all": "All",
+    "customrecentchanges-entry-footer-nchangeslink": "Show $1 results",
+    "customrecentchanges-entry-footer-historylink": "History",
+    "customrecentchanges-entry-new": "New page: $1",
+    "customrecentchanges-entry-edit": "Edited page: $1"
 }
